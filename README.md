@@ -131,7 +131,7 @@ Single image inference:
 python detect.py --weights best.pt --source test.jpg --conf 0.25
 ```
 ### Visualization Results
-![result](https://raw.githubusercontent.com/v1smile/coal-mine-pose-detection/main/images/9521.jpg)
+![result](https://raw.githubusercontent.com/v1smile/coal-mine-pose-detection/main/images/8178.jpg)
 
 Batch image and video inference are supported. 
 
