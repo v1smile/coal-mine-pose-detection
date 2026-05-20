@@ -148,6 +148,9 @@ Deployment tutorials for embedded devices and server platforms are placed in the
 
 
 ## 📄 Citation & DOI
+This repository is archived on Zenodo with DOI:
+[https://doi.org/10.5281/zenodo.20302193](https://doi.org/10.5281/zenodo.20302193)
+
 If you find this work useful, please cite our paper:
 ```bibtex
 @article{yourpaper,
