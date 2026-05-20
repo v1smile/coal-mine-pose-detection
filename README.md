@@ -3,6 +3,19 @@ This is the official open-source repository for the paper submitted to *The Visu
 
 ---
 
+## 🖥️ Experimental Environment
+| Environmental items | Configuration value |
+|---------------------|----------------------|
+| Operating system    | Ubuntu               |
+| Programming language| Python 3.8           |
+| GPU                 | NVIDIA GeForce RTX 4070 12GB |
+| CPU                 | Intel(R) Core(TM) i5-14600KF |
+| Memory              | 32 GB                |
+| Deep learning framework | PyTorch 2.1.0    |
+| CUDA Version        | CUDA 12.1            |
+
+---
+
 ## 📂 Repository Structure
 ```text
 ├── dataset/                # Dataset directory (organized in YOLO format)
@@ -24,11 +37,6 @@ This is the official open-source repository for the paper submitted to *The Visu
 ├── requirements.txt        # Environmental dependency file
 └── test_env.py             # Environment dependency verification
 
-## ⚙️ Environment Requirements
-- Python ≥ 3.9
-- PyTorch ≥ 2.0.1 (with CUDA 11.7+ support recommended)
-- Ultralytics ≥ 8.2.0
-- OpenCV-Python, Matplotlib, Pycocotools
 
 ### 1. Native Installation
 ```bash
@@ -38,7 +46,7 @@ cd coal-mine-pose-detection
 conda create -n coal-pose python=3.8 -y
 conda activate coal-pose
 
-pip install torch==2.0.1 torchvision==0.12.2 torchaudio==2.0.2 --index-url https://download.pytorch.org/whl/cu112
+pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.2 --index-url https://download.pytorch.org/whl/cu121
 pip install ultralytics opencv-python matplotlib pandas pycocotools
 
 ### 2. Docker Installation (Recommended for Reproducibility)
