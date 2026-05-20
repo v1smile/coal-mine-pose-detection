@@ -84,6 +84,7 @@ python transform_PGI.py
 ```
 
 ## 📊 Experimental Results & Visualization
+The figure below demonstrates the visual enhancement effect of the proposed PENet module on raw low-light coal mine surveillance images. The top row shows the original input image captured under severe low illumination and heavy dust conditions, which suffers from low contrast, blurred details, and obscured key equipment and personnel. The bottom row presents the corresponding enhanced result, where PENet significantly improves brightness, contrast, and overall visibility while preserving critical structural details and textures.
 ### Qualitative Comparison Results
 ![result](https://raw.githubusercontent.com/v1smile/coal-mine-pose-detection/main/images/0108-000028-01.jpg)
 
@@ -129,6 +130,8 @@ Single image inference:
 ```bash
 python detect.py --weights best.pt --source test.jpg --conf 0.25
 ```
+### Visualization Results
+![result](https://raw.githubusercontent.com/v1smile/coal-mine-pose-detection/main/images/9521.jpg)
 
 Batch image and video inference are supported. 
 
