@@ -1,5 +1,5 @@
 # Multi-Module Enhanced Human Pose Detection for Low-Illumination Coal Mine Environments
-This is the official open-source repository for the paper submitted to *The Visual Computer*. It provides a complete, reproducible pipeline for **data preprocessing, model training, inference evaluation, and multi-platform deployment**, ensuring that researchers can replicate our experiments and validate results with minimal effort.
+This repository contains the official source code of the manuscript accepted/submitted to The Visual Computer. It provides a complete, reproducible pipeline for **data preprocessing, model training, inference evaluation, and multi-platform deployment**, ensuring that researchers can replicate our experiments and validate results with minimal effort.
 
 ---
 
@@ -37,6 +37,7 @@ This is the official open-source repository for the paper submitted to *The Visu
 ├── requirements.txt        # Environmental dependency file
 └── test_env.py             # Environment dependency verification
 
+```
 
 ### 1. Native Installation
 ```bash
@@ -49,15 +50,20 @@ conda activate coal-pose
 pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.2 --index-url https://download.pytorch.org/whl/cu121
 pip install ultralytics opencv-python matplotlib pandas pycocotools
 
+```
+
 ### 2. Docker Installation (Recommended for Reproducibility)
 ```bash
 cd docker
 docker build -t coal-pose-det:v1 .
 docker run -it --gpus all coal-pose-det:v1
 
+```
+
 ### 3. Verify Environment
 ```bash
 python test_env.py
+```
 
 All checks passing indicates the environment is ready.
 
@@ -70,10 +76,12 @@ dataset/
 ├── val/images
 ├── val/labels
 └── test/images
+```
 
 2.Execute data enhancement and low-light image preprocessing:
 ```bash
 python transform_PGI.py
+```
 
 ## 📊 Experimental Results & Visualization
 ### Qualitative Comparison Results
@@ -98,6 +106,7 @@ All improved modules are completely open-sourced and embedded in the network str
 ### Training
 ```bash
 python train.py --cfg your_model.yaml --data coal_mine.yaml --epochs 200 --batch 8
+```
 --cfg: Custom network configuration file path
 --data: Dataset configuration file path
 --epochs: Total training epochs
@@ -106,10 +115,12 @@ python train.py --cfg your_model.yaml --data coal_mine.yaml --epochs 200 --batch
 ### Resume interrupted training
 ```bash
 python train.py --resume runs/train/exp/weights/last.pt
+```
 
 ### Validation
 ```bash
 python val.py --weights best.pt --data coal_mine.yaml
+```
 
 Automatically calculate mAP, precision, recall and other quantitative indicators, and output standard evaluation results consistent with paper experimental data.
 
@@ -117,6 +128,7 @@ Automatically calculate mAP, precision, recall and other quantitative indicators
 Single image inference:
 ```bash
 python detect.py --weights best.pt --source test.jpg --conf 0.25
+```
 
 Batch image and video inference are supported. 
 
@@ -127,6 +139,7 @@ Supports one-click export of multiple deployment formats for actual engineering 
 ```bash
 python export.py --weights best.pt --include onnx
 python export.py --weights best.pt --include engine
+```
 
 Deployment tutorials for embedded devices and server platforms are placed in the docs/ folder.
 
@@ -141,6 +154,8 @@ If you find this work useful, please cite our paper:
   year={2026},
   doi={}
 }
+
+```
 
 This repository is archived on Zenodo with DOI: [your-doi-here].
 
