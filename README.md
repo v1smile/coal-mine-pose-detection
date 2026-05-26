@@ -1,5 +1,5 @@
 # Multi-Module Enhanced Human Pose Detection for Low-Illumination Coal Mine Environments
-This repository contains the official source code of the manuscript accepted/submitted to The Visual Computer. It provides a complete, reproducible pipeline for **data preprocessing, model training, inference evaluation, and multi-platform deployment**, ensuring that researchers can replicate our experiments and validate results with minimal effort.
+This repository contains the official source code of the manuscript accepted/submitted to JOURNAL OF ELECTRONIC IMAGING. It provides a complete, reproducible pipeline for **data preprocessing, model training, inference evaluation, and multi-platform deployment**, ensuring that researchers can replicate our experiments and validate results with minimal effort.
 
 ---
 
